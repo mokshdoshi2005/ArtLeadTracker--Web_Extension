@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Tab Navigation -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="tracker">Tracker</button>
+            <button class="tab-btn" data-tab="moodboard">Moodboard</button>
+        </nav>
+
+        <!-- ========== TRACKER TAB ========== -->
+        <div id="tracker-tab" class="tab-content active">
+            <!-- Header -->
+            <header class="header">
+                <h1>Artist Tracker</h1>
+                <p class="subtitle">Collect & organize your favorite artists</p>
+            </header>
+
+            <!-- Add Artist -->
+            <div class="input-section">
+                <input type="text" id="artistInput" placeholder="Artist name...">
+                <button id="addArtistBtn" class="btn btn-primary">Add Artist</button>
+            </div>
+
+            <!-- Add Link -->
+            <div class="link-section">
+                <select id="artistSelect">
+                    <option value="">Select artist...</option>
+                </select>
+                <input type="text" id="linkInput" placeholder="Paste a link to their work...">
+                <div class="button-group">
+                    <button id="addLinkBtn" class="btn btn-secondary">Add Link</button>
+                    <button id="saveTabBtn" class="btn btn-accent">Save Tab</button>
+                </div>
+            </div>
+
+            <!-- Artists List -->
+            <div class="artists-section">
+                <h2>Your Collection</h2>
+                <div id="artistsList" class="artists-list"></div>
+            </div>
+
+            <!-- JSON Display -->
+            <div class="json-section">
+                <div class="json-header">
+                    <h2>Data</h2>
+                    <button id="copyJsonBtn" class="btn btn-small">Copy</button>
+                </div>
+                <pre id="jsonDisplay" class="json-display">{}</pre>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions">
+                <button id="exportBtn" class="btn btn-outline">Export</button>
+                <button id="clearBtn" class="btn btn-danger">Clear All</button>
+            </div>
+        </div>
+
+        <!-- ========== MOODBOARD TAB ========== -->
+        <div id="moodboard-tab" class="tab-content">
+            <div class="moodboard-container">
+                <!-- Header -->
+                <div class="moodboard-header">
+                    <h1 class="moodboard-title">ARTWORK</h1>
+                    <h1 class="moodboard-title">INSPIRATION</h1>
+                    <p class="moodboard-subtitle">Your curated collection of artistic inspiration</p>
+                </div>
+
+                <!-- Filter by Artist -->
+                <div class="moodboard-filter">
+                    <select id="filterArtist">
+                        <option value="all">All Artists</option>
+                    </select>
+                </div>
+
+                <!-- Moodboard Grid -->
+                <div id="moodboardGrid" class="moodboard-grid">
+                    <!-- Images will be dynamically inserted here -->
+                </div>
+
+                <!-- Empty State -->
+                <div id="moodboardEmpty" class="moodboard-empty">
+                    <p>No images yet</p>
+                    <span>Add image links in the Tracker tab to see them here</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

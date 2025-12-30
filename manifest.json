@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Artist Tracker",
+    "version": "2.0.0",
+    "description": "Store artists with links to their works in JSON format",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/icon.jpeg"
+    },
+    "permissions": [
+        "storage",
+        "tabs"
+    ]
+}
